@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AddInput from "./AddInput";
 import TodoItem from "./TodoItem";
+import empty from "../images/workImg.png";
 
 function TodoList() {
     const [text, setText] = useState("");
@@ -84,7 +85,7 @@ function TodoList() {
                     (
                         <div className="empty">
                             <p>目前尚無待辦事項</p>
-                            <img src="https://upload.cc/i1/2022/03/23/tj3Bdk.png" alt="empty"/>
+                            <img src={empty} alt="empty"/>
                         </div>
                     )
                     }
