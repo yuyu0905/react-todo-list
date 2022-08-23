@@ -1,9 +1,11 @@
+import Swal from 'sweetalert2';
+
 function AddInput({ text, setText, data, setData }) {
     const add = () => {
       if (text === "") {
-        alert("請輸入代辦事項內容!");
+        Swal.fire('請輸入代辦事項內容!', '', 'error');
       } else {
-        alert("新增成功!");
+        Swal.fire('新增成功!', '', 'success');
         setText("");
         setData([...data, { todoId: Date.now(), content: text, isFinished: false }]);
       }

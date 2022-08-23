@@ -2,6 +2,7 @@ import { useState } from "react";
 import AddInput from "./AddInput";
 import TodoItem from "./TodoItem";
 import empty from "../images/workImg.png";
+import Swal from 'sweetalert2';
 
 function TodoList() {
     const [text, setText] = useState("");
@@ -31,9 +32,18 @@ function TodoList() {
     };
 
     const clearAll = () => {
-        if (window.confirm("確定要清除已完成項目?")) {
-            setData(data.filter((item) => !item.isFinished));
-        }
+        Swal.fire({
+            title: '確定要清除已完成項目?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: '確認',
+            cancelButtonText: '取消',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setData(data.filter((item) => !item.isFinished));
+              Swal.fire('清除成功!', '', 'success');
+            }
+        });
     }
 
     return (
