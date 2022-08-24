@@ -1,9 +1,7 @@
 # 六角學院 - 2022React 讀書會 
-
-## React 新手證書任務
 [GitHub Pages](https://yuyu0905.github.io/react-todo-list/#)
 
-### 任務資訊
+## React 新手證書任務 - 任務資訊
 設計稿：[Figma 設計稿](https://www.figma.com/file/pFivfS3rDX3N3u3dN9aIlx/TodoList?node-id=0%3A1)、 [Codepen CSS 排版](https://codepen.io/liao/pen/mdpmXKg?editors=1010) (可 fork 版型來挑戰此任務)
 不需介接 API，不用做登入、註冊功能，只做代辦頁面。
 
